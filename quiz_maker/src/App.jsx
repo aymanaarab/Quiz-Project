@@ -4,8 +4,8 @@ import './styles.css';
 import Home from './components/Home';
 import Dashboard from './components/Dashboard';
 import AllQuizes from './components/AllQuizes';
-import CreateQuiz from './components/CreateQuiz';
 import QuizMaker from './components/QuizMaker';
+import ModifyQuiz from './components/ModifyQuiz';
 
 function App() {
   return (
@@ -16,8 +16,9 @@ function App() {
           <main className="p-4">
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/all-quizzes" element={<AllQuizes />} />
               <Route path="/create-quiz" element={<QuizMaker />} />
+              <Route path="/modify-quiz/:id" element={<ModifyQuiz />} />
+              <Route path="/all-quizzes" element={<AllQuizes />} />
             </Routes>
           </main>
         </div>
